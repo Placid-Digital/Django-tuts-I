@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transactions</title>
+</head>
+<body>
+  <h2>Transaction History</h2><hr>
+  <h4>Account Holder : {{ statement.owner }}</h4>
+  <h3>From Account no : {{ statement.from_account }}</h3>
+
+  {{statement.owner}}
+  {{ statement.from_account }}
+
+<!-- {#    <a  href="#"  class="btn btn-outline-success" type="submit">Add Money</a>#}
+{#    <a  href="{% url 'login' %}"  class="btn btn-outline-success" type="submit">Login</a>#} -->
+  <h5 class="text-center">statement</h5>
+  <hr>
+      <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">particular</th>
+        <th scope="col">Debit</th>
+        <th scope="col">Credit</th>
+        <th scope="col">Closing Balance</th>
+        <th scope="col">Balance</th>
+        <th scope="col">statementt</th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+    {% for transact in tran_id %}
+      <tr>
+        <th scope="row">{{ transact.id }}</th>
+        <td>{{ transact.transaction_date }}</td>
+        <td>to {{ transact.to_account }}/{{ transact.transaction_mode }}</td>
+        <td>{{ transact.amount }}</td>
+        <td> NA </td>
+        <td>{{ transact.opening_balance }}</td>
+        <td>{{ balance }}</td>
+        <td>{{ statement.openinig_balance }}</td>
+      </td>
+      </tr>
+      {% comment %} {% if transact.transaction_mode == 'withdraw-money' %}
+      <tr>
+        <th scope="row">{{ transact.id }}</th>
+        <td>{{ transact.transaction_date }}</td>
+        <td>to {{ transact.to_account }}/{{ transact.transaction_mode }}</td>
+        <td>{{ transact.amount }}</td>
+        <td>{{ transact.amount }}</td>
+        <td>{{ transact.opening_balance }}</td>
+        <td>{{ balance }}</td>
+        <td>{{ statement.openinig_balance }}</td>
+      </td>
+      </tr>
+      {% endif %} {% endcomment %}
+    {% endfor %}
+
+    </tbody>
+
+  </table>
+</body>
+</html>
+
+</body>
+</html>
+
+{% endblock body %}

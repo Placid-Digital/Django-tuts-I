@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <br>
+    <a href="{% url 'homepage' %}"  class="btn btn-outline-success" type="submit">Back to Home</a><hr>
+    <div class=" text-center" style="border: rgb(122, 115, 161); background-color: rgb(168, 181, 211); ">
+    <h2  >Send Money To Account</h2> <hr></div>
+        
+        <h3>Owner name: {{user_name}}</h3>
+    <h3>Your Balance is: {{ balance }}</h3>
+    
+{% if message %}
+    <h2 style="color: rgb(167, 20, 27);" >{{ message }}</h2>
+    {% else %}
+        <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-5  offset-1 alert alert-danger" >
+            <h3 class="text-center alert alert-success" >Fill The Account Detail  </h3>
+            <form action="{% url 'send_money'%}" method="POST">
+            {% csrf_token %}
+            <table>
+            {% for form in form %}
+            {{form.label_tag}} {{form}} <br> <br>
+            {% endfor %}
+            <tr>
+                <td><input class="btn btn-success" type="submit" name="submit" value="Conferm"/></td>
+            </tr>
+            </table>
+            </form>
+        </div>
+    </div>
+</div>
+    {% endif %}
+
+{% endblock %}
