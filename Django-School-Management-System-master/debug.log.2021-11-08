@@ -1,0 +1,1369 @@
+INFO 2021-12-01 10:21:17,386 Watching for file changes with StatReloader
+INFO 2021-12-01 10:23:04,119 Watching for file changes with StatReloader
+INFO 2021-12-01 10:27:30,015 /home/a002/Downloads/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-01 10:27:48,546 Watching for file changes with StatReloader
+INFO 2021-12-01 10:28:41,279 Watching for file changes with StatReloader
+ERROR 2021-12-01 10:28:44,975 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 10:28:44,979 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 10:29:28,049 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 10:29:28,050 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 10:31:01,848 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 10:31:01,850 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 10:49:08,305 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 10:49:08,306 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 11:14:00,436 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:14:00,437 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 11:14:03,835 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:14:03,835 "GET / HTTP/1.1" 500 126781
+ERROR 2021-12-01 11:15:24,214 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:15:24,215 "GET / HTTP/1.1" 500 126781
+INFO 2021-12-01 11:16:03,150 Watching for file changes with StatReloader
+ERROR 2021-12-01 11:16:17,680 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:16:17,683 "GET / HTTP/1.1" 500 126781
+INFO 2021-12-01 11:22:33,394 Watching for file changes with StatReloader
+ERROR 2021-12-01 11:22:42,526 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:22:42,528 "GET / HTTP/1.1" 500 126639
+ERROR 2021-12-01 11:24:40,104 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "corecode_academicsession" does not exist
+LINE 1: ..."name", "corecode_academicsession"."current" FROM "corecode_...
+                                                             ^
+
+ERROR 2021-12-01 11:24:40,105 "GET / HTTP/1.1" 500 126639
+INFO 2021-12-01 11:29:03,078 Watching for file changes with StatReloader
+INFO 2021-12-01 11:29:11,384 "GET / HTTP/1.1" 302 0
+INFO 2021-12-01 11:29:11,567 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2021-12-01 11:29:11,816 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8610
+INFO 2021-12-01 11:29:11,859 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2021-12-01 11:29:11,875 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19724
+INFO 2021-12-01 11:29:11,903 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686707
+INFO 2021-12-01 11:29:11,939 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88145
+INFO 2021-12-01 11:29:12,005 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42383
+INFO 2021-12-01 11:29:12,009 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80698
+INFO 2021-12-01 11:29:12,020 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5251
+INFO 2021-12-01 11:29:12,033 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58578
+INFO 2021-12-01 11:29:12,061 "GET /static/dist/img/login.png HTTP/1.1" 200 144918
+INFO 2021-12-01 11:29:12,742 "GET /static/dist/js/demo.js HTTP/1.1" 200 12616
+INFO 2021-12-01 11:29:12,743 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13632
+INFO 2021-12-01 11:29:12,763 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 57530
+INFO 2021-12-01 11:29:12,775 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2021-12-01 11:29:50,581 "POST /accounts/login/ HTTP/1.1" 200 4106
+INFO 2021-12-01 11:31:16,164 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:31:16,416 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-01 11:31:16,682 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042446
+INFO 2021-12-01 11:31:16,690 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25780
+INFO 2021-12-01 11:31:17,464 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2021-12-01 11:31:25,716 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-01 11:31:29,880 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-01 11:31:32,304 "GET /finance/list/ HTTP/1.1" 200 9925
+INFO 2021-12-01 11:31:34,944 "GET /result/create/ HTTP/1.1" 200 10386
+INFO 2021-12-01 11:31:38,881 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2021-12-01 11:31:41,485 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:31:41,557 "GET /result/edit-results/ HTTP/1.1" 200 10247
+INFO 2021-12-01 11:37:12,638 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-01 11:37:17,378 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-01 11:37:19,466 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-01 11:37:41,619 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:37:41,640 "GET / HTTP/1.1" 302 0
+INFO 2021-12-01 11:37:41,728 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2021-12-01 11:37:51,951 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:37:51,987 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-01 11:42:36,061 "GET /result/create/ HTTP/1.1" 200 10386
+INFO 2021-12-01 11:42:45,085 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-01 11:42:52,598 "GET /student/create/ HTTP/1.1" 200 13612
+INFO 2021-12-01 11:44:13,445 "POST /student/create/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:44:13,540 "GET /student/1/ HTTP/1.1" 200 11303
+INFO 2021-12-01 11:44:13,660 "GET /media/students/passports/dd6.jpg HTTP/1.1" 200 5689
+INFO 2021-12-01 11:44:48,618 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-01 11:44:50,190 "GET /staff/create/ HTTP/1.1" 200 12600
+INFO 2021-12-01 11:45:03,342 "POST /staff/create/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:45:03,438 "GET /staff/1/ HTTP/1.1" 200 10847
+INFO 2021-12-01 11:45:06,918 "GET /finance/list/ HTTP/1.1" 200 9925
+INFO 2021-12-01 11:45:10,950 "GET /finance/create/ HTTP/1.1" 200 13432
+INFO 2021-12-01 11:45:48,128 "POST /finance/create/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:45:48,152 "GET /finance/list HTTP/1.1" 301 0
+INFO 2021-12-01 11:45:48,644 "GET /finance/list/ HTTP/1.1" 200 10353
+INFO 2021-12-01 11:45:54,260 "GET /finance/list/ HTTP/1.1" 200 10353
+INFO 2021-12-01 11:45:55,484 "GET /finance/1/detail/ HTTP/1.1" 200 10953
+INFO 2021-12-01 11:46:06,908 "GET /result/create/ HTTP/1.1" 200 10566
+INFO 2021-12-01 11:46:10,856 "POST /result/create/ HTTP/1.1" 200 10905
+INFO 2021-12-01 11:46:18,021 "POST /result/create/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:46:18,129 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2021-12-01 11:46:20,445 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:46:20,541 "GET /result/edit-results/ HTTP/1.1" 200 10247
+INFO 2021-12-01 11:46:29,817 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2021-12-01 11:46:31,101 "GET /result/view/all HTTP/1.1" 200 8834
+INFO 2021-12-01 11:46:34,293 "GET /result/view/all HTTP/1.1" 200 8834
+INFO 2021-12-01 11:46:41,985 "GET /current-session/ HTTP/1.1" 200 10518
+ERROR 2021-12-01 11:46:48,321 Internal Server Error: /current-session/
+Traceback (most recent call last):
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/a002/PycharmProjects/pythonProject/DjangoProject/venv/lib/python3.6/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/a002/Downloads/Django-School-Management-System-master/apps/corecode/views.py", line 257, in post
+    form = self.form_Class(request.POST)
+AttributeError: 'CurrentSessionAndTermView' object has no attribute 'form_Class'
+ERROR 2021-12-01 11:46:48,322 "POST /current-session/ HTTP/1.1" 500 84188
+INFO 2021-12-01 11:46:56,422 "GET /result/edit-results/ HTTP/1.1" 200 10104
+INFO 2021-12-01 11:46:58,018 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:46:58,066 "GET /result/edit-results/ HTTP/1.1" 200 10247
+INFO 2021-12-01 11:47:04,438 "GET /session/list/ HTTP/1.1" 200 11598
+INFO 2021-12-01 11:47:10,966 "GET /term/list/ HTTP/1.1" 200 12231
+INFO 2021-12-01 11:47:14,962 "GET /site-config HTTP/1.1" 200 10862
+INFO 2021-12-01 11:47:38,243 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-01 11:47:40,931 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-01 11:47:42,768 "GET /current-session/ HTTP/1.1" 200 10518
+INFO 2021-12-01 11:47:47,939 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-01 11:47:56,208 "GET /staff/list/ HTTP/1.1" 200 9890
+INFO 2021-12-01 11:47:58,284 "GET /staff/1/ HTTP/1.1" 200 10704
+INFO 2021-12-01 11:48:07,944 "GET /staff/1/delete/ HTTP/1.1" 200 9587
+INFO 2021-12-01 11:48:09,924 "POST /staff/1/delete/ HTTP/1.1" 302 0
+INFO 2021-12-01 11:48:09,960 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-01 11:48:12,588 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-01 11:48:53,258 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-01 12:32:36,352 Watching for file changes with StatReloader
+INFO 2021-12-01 12:33:34,375 Watching for file changes with StatReloader
+INFO 2021-12-01 12:33:39,129 "GET / HTTP/1.1" 200 9290
+WARNING 2021-12-01 12:34:05,361 Not Found: /admin
+WARNING 2021-12-01 12:34:05,362 "GET /admin HTTP/1.1" 404 6185
+INFO 2021-12-02 04:37:27,893 Watching for file changes with StatReloader
+INFO 2021-12-02 04:43:17,327 Watching for file changes with StatReloader
+INFO 2021-12-02 04:45:29,797 Watching for file changes with StatReloader
+INFO 2021-12-02 04:48:45,544 Watching for file changes with StatReloader
+INFO 2021-12-02 04:49:54,822 Watching for file changes with StatReloader
+INFO 2021-12-02 04:50:59,766 Watching for file changes with StatReloader
+INFO 2021-12-02 04:51:38,936 Watching for file changes with StatReloader
+INFO 2021-12-02 04:51:53,489 "GET / HTTP/1.1" 302 0
+INFO 2021-12-02 04:51:54,136 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+WARNING 2021-12-02 04:51:54,856 Not Found: /favicon.ico
+WARNING 2021-12-02 04:51:54,856 "GET /favicon.ico HTTP/1.1" 404 6203
+INFO 2021-12-02 04:52:08,138 "POST /accounts/login/ HTTP/1.1" 200 4106
+INFO 2021-12-02 04:52:19,252 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2021-12-02 04:52:19,348 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-02 04:52:22,300 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-02 05:06:46,664 Watching for file changes with StatReloader
+INFO 2021-12-02 05:12:18,905 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-02 05:13:40,604 Watching for file changes with StatReloader
+INFO 2021-12-02 05:14:02,753 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-02 05:14:16,865 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-03 07:20:07,210 Watching for file changes with StatReloader
+INFO 2021-12-03 07:21:20,490 Watching for file changes with StatReloader
+INFO 2021-12-03 07:29:15,811 Watching for file changes with StatReloader
+INFO 2021-12-03 07:31:33,750 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 07:31:34,149 Watching for file changes with StatReloader
+INFO 2021-12-03 08:12:50,718 Watching for file changes with StatReloader
+INFO 2021-12-03 08:25:43,313 Watching for file changes with StatReloader
+INFO 2021-12-03 08:34:47,029 Watching for file changes with StatReloader
+ERROR 2021-12-03 08:35:14,578 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 513, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 262, in get_select
+    sql, params = self.compile(col)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/expressions.py", line 835, in as_sql
+    sql = '.'.join(map(compiler.quote_name_unless_alias, identifiers))
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 436, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/backends/dummy/base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+ERROR 2021-12-03 08:35:14,580 "GET / HTTP/1.1" 500 123836
+ERROR 2021-12-03 08:35:14,857 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/apps/corecode/middleware.py", line 9, in __call__
+    current_session = AcademicSession.objects.get(current=True)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 431, in get
+    num = len(clone)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 262, in __len__
+    self._fetch_all()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 513, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 55, in pre_sql_setup
+    self.setup_query()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 46, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 262, in get_select
+    sql, params = self.compile(col)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 445, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/expressions.py", line 835, in as_sql
+    sql = '.'.join(map(compiler.quote_name_unless_alias, identifiers))
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 436, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/home/placid/DjangoProject/venv/lib/python3.9/site-packages/django/db/backends/dummy/base.py", line 20, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+ERROR 2021-12-03 08:35:14,858 "GET /favicon.ico HTTP/1.1" 500 123739
+INFO 2021-12-03 08:35:33,932 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 08:35:34,296 Watching for file changes with StatReloader
+INFO 2021-12-03 08:47:41,523 Watching for file changes with StatReloader
+INFO 2021-12-03 09:18:19,104 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 09:18:19,688 Watching for file changes with StatReloader
+INFO 2021-12-03 09:18:36,660 Watching for file changes with StatReloader
+INFO 2021-12-03 09:25:01,696 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 09:25:02,114 Watching for file changes with StatReloader
+INFO 2021-12-03 09:25:33,651 Watching for file changes with StatReloader
+INFO 2021-12-03 09:25:40,412 "GET / HTTP/1.1" 302 0
+INFO 2021-12-03 09:25:40,466 "GET /accounts/login/?next=/ HTTP/1.1" 200 3981
+INFO 2021-12-03 09:25:40,939 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19724
+INFO 2021-12-03 09:25:40,940 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8610
+INFO 2021-12-03 09:25:40,941 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2021-12-03 09:25:40,942 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58578
+INFO 2021-12-03 09:25:40,946 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88145
+INFO 2021-12-03 09:25:40,949 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13632
+INFO 2021-12-03 09:25:40,951 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5251
+INFO 2021-12-03 09:25:40,953 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686707
+INFO 2021-12-03 09:25:40,954 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80698
+INFO 2021-12-03 09:25:40,964 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 57530
+INFO 2021-12-03 09:25:40,978 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42383
+INFO 2021-12-03 09:25:40,992 "GET /static/dist/js/demo.js HTTP/1.1" 200 12616
+INFO 2021-12-03 09:25:40,993 "GET /static/dist/img/login.png HTTP/1.1" 200 144918
+INFO 2021-12-03 09:25:41,196 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+WARNING 2021-12-03 09:25:41,639 Not Found: /favicon.ico
+WARNING 2021-12-03 09:25:41,639 "GET /favicon.ico HTTP/1.1" 404 6202
+INFO 2021-12-03 09:25:51,646 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2021-12-03 09:25:51,697 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-03 09:25:51,736 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25780
+INFO 2021-12-03 09:25:51,743 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042446
+INFO 2021-12-03 09:25:52,249 "GET /static/plugins/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13584
+INFO 2021-12-03 09:48:34,006 Watching for file changes with StatReloader
+WARNING 2021-12-03 09:49:55,332 Not Found: /api/users
+WARNING 2021-12-03 09:49:55,332 "GET /api/users HTTP/1.1" 404 6196
+WARNING 2021-12-03 09:50:11,302 Not Found: /student/api/users
+WARNING 2021-12-03 09:50:11,303 "GET /student/api/users HTTP/1.1" 404 7444
+INFO 2021-12-03 09:52:58,884 Watching for file changes with StatReloader
+INFO 2021-12-03 10:12:26,546 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/urls.py changed, reloading.
+INFO 2021-12-03 10:12:26,975 Watching for file changes with StatReloader
+INFO 2021-12-03 10:13:26,809 Watching for file changes with StatReloader
+INFO 2021-12-03 10:15:12,870 Watching for file changes with StatReloader
+INFO 2021-12-03 10:25:41,493 Watching for file changes with StatReloader
+INFO 2021-12-03 10:32:35,457 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 10:32:36,905 Watching for file changes with StatReloader
+INFO 2021-12-03 10:34:15,606 Watching for file changes with StatReloader
+INFO 2021-12-03 10:44:17,471 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 10:44:17,868 Watching for file changes with StatReloader
+INFO 2021-12-03 10:44:26,137 Watching for file changes with StatReloader
+INFO 2021-12-03 10:45:03,124 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 10:45:03,659 Watching for file changes with StatReloader
+INFO 2021-12-03 10:45:16,185 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 10:45:16,579 Watching for file changes with StatReloader
+INFO 2021-12-03 10:46:32,633 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 10:46:33,045 Watching for file changes with StatReloader
+INFO 2021-12-03 11:09:45,948 Watching for file changes with StatReloader
+INFO 2021-12-03 11:28:35,002 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 11:28:35,390 Watching for file changes with StatReloader
+INFO 2021-12-03 11:29:14,164 "GET /student/api/users HTTP/1.1" 301 0
+WARNING 2021-12-03 11:29:14,438 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 11:29:14,439 "GET /student/api/users/ HTTP/1.1" 405 5652
+INFO 2021-12-03 11:29:14,617 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2021-12-03 11:29:14,617 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2021-12-03 11:29:14,626 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2021-12-03 11:29:14,627 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2021-12-03 11:29:14,634 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2021-12-03 11:29:14,637 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2021-12-03 11:29:14,642 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2021-12-03 11:29:14,644 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2021-12-03 11:29:14,644 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2021-12-03 11:29:14,647 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2021-12-03 11:29:14,659 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2021-12-03 11:36:58,082 Watching for file changes with StatReloader
+INFO 2021-12-03 11:38:36,020 Watching for file changes with StatReloader
+WARNING 2021-12-03 11:38:40,891 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 11:38:40,891 "GET /student/api/users/ HTTP/1.1" 405 5652
+ERROR 2021-12-03 11:39:04,956 Internal Server Error: /student/api/users/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2021-12-03 11:39:04,961 "POST /student/api/users/ HTTP/1.1" 500 82203
+INFO 2021-12-03 11:40:07,057 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 11:40:07,678 Watching for file changes with StatReloader
+ERROR 2021-12-03 11:40:16,928 Internal Server Error: /student/api/users/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2021-12-03 11:40:16,933 "POST /student/api/users/ HTTP/1.1" 500 82203
+ERROR 2021-12-03 11:40:18,579 Internal Server Error: /student/api/users/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2021-12-03 11:40:18,583 "POST /student/api/users/ HTTP/1.1" 500 82203
+INFO 2021-12-03 11:43:16,671 "POST /student/api/users/ HTTP/1.1" 201 5855
+INFO 2021-12-03 11:43:16,739 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2021-12-03 11:43:16,740 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2021-12-03 11:43:16,746 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2021-12-03 11:43:16,748 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476
+INFO 2021-12-03 11:43:16,750 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2021-12-03 11:43:16,751 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2021-12-03 11:43:16,756 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2021-12-03 11:43:16,757 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2021-12-03 11:43:16,762 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2021-12-03 11:43:16,765 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2021-12-03 11:43:16,766 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+ERROR 2021-12-03 11:43:29,227 Internal Server Error: /student/api/users/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2021-12-03 11:43:29,231 "POST /student/api/users/ HTTP/1.1" 500 82203
+WARNING 2021-12-03 11:43:34,015 Unsupported Media Type: /student/api/users/
+WARNING 2021-12-03 11:43:34,016 "POST /student/api/users/ HTTP/1.1" 415 76
+INFO 2021-12-03 11:52:01,808 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/views.py changed, reloading.
+INFO 2021-12-03 12:09:53,104 Watching for file changes with StatReloader
+INFO 2021-12-03 12:11:46,046 Watching for file changes with StatReloader
+INFO 2021-12-03 12:14:14,134 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/api/serializers.py changed, reloading.
+INFO 2021-12-03 12:14:14,760 Watching for file changes with StatReloader
+INFO 2021-12-03 12:14:24,823 Watching for file changes with StatReloader
+INFO 2021-12-03 12:17:12,681 /home/placid/DjangoProject/Django-School-Management-System-master/apps/students/api/serializers.py changed, reloading.
+INFO 2021-12-03 12:17:13,181 Watching for file changes with StatReloader
+WARNING 2021-12-03 12:17:45,051 Not Found: /student/api/login
+WARNING 2021-12-03 12:17:45,052 "GET /student/api/login HTTP/1.1" 404 7819
+INFO 2021-12-03 12:18:02,873 "GET /student/login HTTP/1.1" 301 0
+WARNING 2021-12-03 12:18:02,981 Method Not Allowed: /student/login/
+WARNING 2021-12-03 12:18:02,981 "GET /student/login/ HTTP/1.1" 405 5335
+INFO 2021-12-03 12:18:03,044 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,045 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,046 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,050 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,062 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,064 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,072 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,076 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,077 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,078 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:18:03,089 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2021-12-03 12:19:14,790 Bad Request: /student/login/
+WARNING 2021-12-03 12:19:14,790 "POST /student/login/ HTTP/1.1" 400 5468
+WARNING 2021-12-03 12:20:32,478 Unsupported Media Type: /student/login/
+WARNING 2021-12-03 12:20:32,479 "POST /student/login/ HTTP/1.1" 415 76
+WARNING 2021-12-03 12:20:44,258 Unsupported Media Type: /student/login/
+WARNING 2021-12-03 12:20:44,259 "POST /student/login/ HTTP/1.1" 415 76
+WARNING 2021-12-03 12:21:01,012 Unsupported Media Type: /student/login/
+WARNING 2021-12-03 12:21:01,013 "POST /student/login/ HTTP/1.1" 415 76
+WARNING 2021-12-03 12:23:33,124 Bad Request: /student/login/
+WARNING 2021-12-03 12:23:33,125 "POST /student/login/ HTTP/1.1" 400 5387
+INFO 2021-12-03 12:23:33,138 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:23:33,142 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:23:33,143 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:23:33,143 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:33:45,867 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 12:33:46,523 Watching for file changes with StatReloader
+ERROR 2021-12-03 12:33:53,254 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:33:53,255 "POST /student/login/ HTTP/1.1" 500 137272
+ERROR 2021-12-03 12:35:01,073 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:35:01,074 "POST /student/login/ HTTP/1.1" 500 137724
+INFO 2021-12-03 12:36:26,788 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 12:36:27,332 Watching for file changes with StatReloader
+ERROR 2021-12-03 12:36:35,393 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:35,395 "GET /student/login/ HTTP/1.1" 500 137729
+ERROR 2021-12-03 12:36:37,785 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:37,786 "GET /student/login/ HTTP/1.1" 500 137729
+ERROR 2021-12-03 12:36:38,264 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:38,265 "GET /student/login/ HTTP/1.1" 500 137729
+ERROR 2021-12-03 12:36:38,628 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:38,629 "GET /student/login/ HTTP/1.1" 500 137729
+ERROR 2021-12-03 12:36:38,887 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:38,888 "GET /student/login/ HTTP/1.1" 500 137729
+ERROR 2021-12-03 12:36:39,179 Internal Server Error: /student/login/
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+AttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/usr/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 78, in wrap_attributeerrors
+    raise exc.with_traceback(info[2])
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 74, in wrap_attributeerrors
+    yield
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/home/placid/DjangoProject/Django-School-Management-System-master/venv/lib/python3.9/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+rest_framework.request.WrappedAttributeError: 'JSONRenderer' object has no attribute 'authenticate'
+ERROR 2021-12-03 12:36:39,180 "GET /student/login/ HTTP/1.1" 500 137729
+INFO 2021-12-03 12:37:06,818 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 12:37:07,383 Watching for file changes with StatReloader
+WARNING 2021-12-03 12:37:11,830 Method Not Allowed: /student/login/
+WARNING 2021-12-03 12:37:11,831 "GET /student/login/ HTTP/1.1" 405 5335
+INFO 2021-12-03 12:37:11,865 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,867 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,874 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,878 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,879 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,879 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,879 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,880 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,880 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,882 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:37:11,934 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2021-12-03 12:38:09,855 Bad Request: /student/login/
+WARNING 2021-12-03 12:38:09,855 "POST /student/login/ HTTP/1.1" 400 5562
+WARNING 2021-12-03 12:38:50,006 Bad Request: /student/login/
+WARNING 2021-12-03 12:38:50,007 "POST /student/login/ HTTP/1.1" 400 5371
+WARNING 2021-12-03 12:38:59,426 Bad Request: /student/api/users/
+WARNING 2021-12-03 12:38:59,427 "POST /student/api/users/ HTTP/1.1" 400 5688
+WARNING 2021-12-03 12:39:06,242 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 12:39:06,242 "GET /student/api/users/ HTTP/1.1" 405 5652
+WARNING 2021-12-03 12:39:13,180 Method Not Allowed: /student/login/
+WARNING 2021-12-03 12:39:13,180 "GET /student/login/ HTTP/1.1" 405 5335
+WARNING 2021-12-03 12:39:23,383 Bad Request: /student/login/
+WARNING 2021-12-03 12:39:23,383 "POST /student/login/ HTTP/1.1" 400 90
+WARNING 2021-12-03 12:40:00,075 Bad Request: /student/login/
+WARNING 2021-12-03 12:40:00,076 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:46:06,422 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 12:46:06,423 "GET /student/api/users/ HTTP/1.1" 405 5652
+INFO 2021-12-03 12:46:06,451 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,456 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,466 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,467 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,468 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,471 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,471 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,471 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,472 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,472 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:46:06,504 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:05,303 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 12:47:05,808 Watching for file changes with StatReloader
+INFO 2021-12-03 12:47:17,246 /home/placid/DjangoProject/Django-School-Management-System-master/school_app/settings.py changed, reloading.
+INFO 2021-12-03 12:47:17,733 Watching for file changes with StatReloader
+WARNING 2021-12-03 12:47:22,777 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 12:47:22,777 "GET /student/api/users/ HTTP/1.1" 405 5652
+WARNING 2021-12-03 12:47:47,394 Bad Request: /student/login/
+WARNING 2021-12-03 12:47:47,394 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:47:49,103 Bad Request: /student/login/
+WARNING 2021-12-03 12:47:49,103 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:47:49,265 Bad Request: /student/login/
+WARNING 2021-12-03 12:47:49,266 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:47:49,408 Bad Request: /student/login/
+WARNING 2021-12-03 12:47:49,408 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:47:52,673 Bad Request: /student/login/
+WARNING 2021-12-03 12:47:52,674 "POST /student/login/ HTTP/1.1" 400 5387
+WARNING 2021-12-03 12:47:56,766 Method Not Allowed: /student/login/
+WARNING 2021-12-03 12:47:56,767 "GET /student/login/ HTTP/1.1" 405 5335
+INFO 2021-12-03 12:47:56,820 "GET /static/rest_framework/js/jquery-3.5.1.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,821 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,827 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,828 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,828 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,829 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2021-12-03 12:47:56,843 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2021-12-03 12:48:40,250 Method Not Allowed: /student/api/users/
+WARNING 2021-12-03 12:48:40,250 "GET /student/api/users/ HTTP/1.1" 405 5652
+INFO 2021-12-03 12:49:29,526 "POST /student/api/users/ HTTP/1.1" 201 5846
+WARNING 2021-12-03 12:49:47,866 Bad Request: /student/login/
+WARNING 2021-12-03 12:49:47,867 "POST /student/login/ HTTP/1.1" 400 5387
+WARNING 2021-12-03 12:51:44,443 Method Not Allowed: /student/login/
+WARNING 2021-12-03 12:51:44,444 "GET /student/login/ HTTP/1.1" 405 5335
+WARNING 2021-12-03 12:51:52,327 Bad Request: /student/login/
+WARNING 2021-12-03 12:51:52,327 "POST /student/login/ HTTP/1.1" 400 108
+WARNING 2021-12-03 12:51:55,195 Bad Request: /student/login/
+WARNING 2021-12-03 12:51:55,196 "POST /student/login/ HTTP/1.1" 400 108
+INFO 2021-12-03 12:52:22,997 "GET / HTTP/1.1" 200 9290
+INFO 2021-12-03 12:52:26,487 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-03 12:52:29,101 "GET /student/create/ HTTP/1.1" 200 13612
+INFO 2021-12-03 12:53:12,894 "POST /student/create/ HTTP/1.1" 302 0
+INFO 2021-12-03 12:53:13,016 "GET /student/1/ HTTP/1.1" 200 11292
+INFO 2021-12-03 12:53:13,126 "GET /static/dist/img/avatar.png HTTP/1.1" 200 8543
+INFO 2021-12-03 12:53:30,940 "GET /staff/list/ HTTP/1.1" 200 9687
+INFO 2021-12-03 12:53:33,168 "GET /staff/create/ HTTP/1.1" 200 12600
+INFO 2021-12-03 12:54:10,206 "POST /staff/create/ HTTP/1.1" 302 0
+INFO 2021-12-03 12:54:10,257 "GET /staff/1/ HTTP/1.1" 200 10842
+INFO 2021-12-03 12:54:16,971 "GET /finance/list/ HTTP/1.1" 200 9925
+INFO 2021-12-03 12:54:20,551 "GET /finance/create/ HTTP/1.1" 200 13429
+INFO 2021-12-03 12:55:12,900 "POST /finance/create/ HTTP/1.1" 302 0
+INFO 2021-12-03 12:55:12,940 "GET /finance/list HTTP/1.1" 301 0
+INFO 2021-12-03 12:55:13,042 "GET /finance/list/ HTTP/1.1" 200 10350
+INFO 2021-12-03 12:55:16,501 "GET /finance/receipt/create?invoice=1 HTTP/1.1" 200 10844
+INFO 2021-12-03 12:55:25,879 "POST /finance/receipt/create?invoice=1 HTTP/1.1" 302 0
+INFO 2021-12-03 12:55:25,941 "GET /finance/list/ HTTP/1.1" 200 10350
+INFO 2021-12-03 12:55:34,425 "GET /finance/bulk-invoice/ HTTP/1.1" 200 9291
+INFO 2021-12-03 12:55:38,992 "GET /finance/list/ HTTP/1.1" 200 10350
+INFO 2021-12-03 12:55:40,762 "GET /finance/receipt/create?invoice=1 HTTP/1.1" 200 10844
+INFO 2021-12-03 12:55:48,666 "GET /result/create/ HTTP/1.1" 200 10564
+INFO 2021-12-03 12:55:56,988 "POST /result/create/ HTTP/1.1" 200 10905
+INFO 2021-12-03 12:56:03,030 "POST /result/create/ HTTP/1.1" 302 0
+INFO 2021-12-03 12:56:03,131 "GET /result/edit-results/ HTTP/1.1" 200 11404
+INFO 2021-12-03 12:56:32,937 "POST /result/edit-results/ HTTP/1.1" 302 0
+INFO 2021-12-03 12:56:33,018 "GET /result/edit-results/ HTTP/1.1" 200 11556
+INFO 2021-12-03 12:56:40,129 "GET /result/view/all HTTP/1.1" 200 10066
+INFO 2021-12-03 13:03:18,080 "GET /finance/list/ HTTP/1.1" 200 10350
+INFO 2021-12-03 13:03:22,475 "GET /finance/receipt/create?invoice=1 HTTP/1.1" 200 10844
+INFO 2021-12-03 13:03:28,018 "GET /staff/list/ HTTP/1.1" 200 9886
+INFO 2021-12-03 13:03:30,134 "GET /staff/1/ HTTP/1.1" 200 10699
+INFO 2021-12-03 13:03:41,355 "GET /staff/1/update/ HTTP/1.1" 200 12647
+INFO 2021-12-03 13:03:44,803 "GET /finance/list/ HTTP/1.1" 200 10350
+INFO 2021-12-03 13:03:48,099 "GET /finance/receipt/create?invoice=1 HTTP/1.1" 200 10844
+INFO 2021-12-03 13:03:50,815 "GET /staff/list/ HTTP/1.1" 200 9886
+INFO 2021-12-03 13:03:57,021 "GET /student/list HTTP/1.1" 200 9946
+INFO 2021-12-03 13:04:00,003 "GET /result/view/all HTTP/1.1" 200 10066
+INFO 2021-12-03 13:04:19,492 "GET /subject/list/ HTTP/1.1" 200 11397
+INFO 2021-12-03 13:04:26,388 "GET /class/list/ HTTP/1.1" 200 11410
+INFO 2021-12-03 13:04:28,535 "GET /class/1/update/ HTTP/1.1" 200 9824
+INFO 2021-12-03 13:04:37,528 "POST /class/1/update/ HTTP/1.1" 302 0
+INFO 2021-12-03 13:04:37,599 "GET /class/list/ HTTP/1.1" 200 11554
+INFO 2021-12-03 13:04:39,888 "GET /class/2/update/ HTTP/1.1" 200 9824
+INFO 2021-12-03 13:04:46,510 "POST /class/2/update/ HTTP/1.1" 302 0
+INFO 2021-12-03 13:04:46,571 "GET /class/list/ HTTP/1.1" 200 11556
+INFO 2021-12-03 13:04:52,339 "GET /site-config HTTP/1.1" 200 10862
+INFO 2021-12-03 13:05:03,519 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-03 13:05:05,980 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-03 13:05:07,995 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-03 13:05:08,497 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-03 13:05:09,266 "GET /site-config HTTP/1.1" 200 10862
+INFO 2021-12-03 13:05:16,860 "POST /site-config HTTP/1.1" 200 10871
+INFO 2021-12-03 13:05:19,225 "GET /result/view/all HTTP/1.1" 200 10066
+INFO 2021-12-03 13:05:22,145 "GET /staff/list/ HTTP/1.1" 200 9886
+INFO 2021-12-03 13:05:23,040 "GET /staff/list/ HTTP/1.1" 200 9886
+INFO 2021-12-03 13:05:28,605 "GET / HTTP/1.1" 200 9290
