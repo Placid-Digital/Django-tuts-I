@@ -69,7 +69,7 @@ a {
 </head>
 <body>
 
-  <form method="POST" action="logged/">
+  <form method="POST" action="{% url 'create' %}">
 
   <div class="container">
     <h1>Register</h1>
@@ -89,7 +89,7 @@ a {
 
     <button type="submit" class="registerbtn">Register</button>
   </div>
-  
+    {% csrf_token %}
   <div class="container signin">
     <p>Already have an account? <a href="#">Sign in</a>.</p>
   </div>

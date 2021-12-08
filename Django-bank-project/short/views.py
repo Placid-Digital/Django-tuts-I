@@ -15,8 +15,8 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
-                request, f'Your account has been created! You are now able to log in')
-            return redirect('login')
+                request, f'Your account has been created! You are now able to login')
+            return redirect('users/login.html')
     else:
         form = UserRegisterForm()
     context = {
@@ -25,12 +25,22 @@ def register(request):
     return render(request, 'users/register.html', context)
 
 
-def login(request, *args, **kwargs):
-  res = login(request, *args, **kwargs)
-  if request.user.is_authenticated():
-    signals.user_login.send(sender=login, request=request, user=request.user)
-  return res
-
+def login(request):
+    if request.method == 'POST':
+        form =  user_logged_in(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.is_valid('username')
+            password = form.is_valid('password')
+            messages.success(
+                request, 'successful login')
+            return redirect('short/profile/')
+    else:
+        form = UserRegisterForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'users/profile.html', context)
 
 #
 # @receiver(user_logged_in)
@@ -48,7 +58,7 @@ def profile(request):
             u_form.save()
             p_form.save()
             messages.success(request, f'Your account has been updated!')
-            return redirect('profile')
+            return redirect('user/profile.html')
     else:
 
         u_form = UserUpdateForm(instance=request.user)
