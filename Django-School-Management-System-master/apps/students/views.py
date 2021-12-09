@@ -1,4 +1,5 @@
 import csv
+from reportlab.pdfgen import canvas  
 
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -22,7 +23,35 @@ from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
 from rest_framework import status
 
+# example pdf
 
+
+def getpdf(request):  
+    response = HttpResponse(content_type='application/pdf')  
+    response['Content-Disposition'] = 'attachment; filename="file.pdf"'  
+    p = canvas.Canvas(response)  
+    p.setFont("Times-Roman", 55)  
+    p.drawString(100,700, "Hello, this is a future.")  
+    p.showPage()  
+    p.save()  
+    return response  
+
+
+
+# example csv
+import csv  
+  
+def getfile(request):  
+    response = HttpResponse(content_type='text/csv')  
+    response['Content-Disposition'] = 'attachment; filename="file.csv"'  
+    writer = csv.writer(response)  
+    writer.writerow(['1001', 'John', 'Domil', 'CA'])  
+    writer.writerow(['1002', 'Amit', 'Mukharji', 'LA', '"Testing"'])  
+    return response  
+
+
+
+# schoolproject
 class AccountsTest(APITestCase):
     def setUp(self):
         # We want to go ahead and originally create a user.

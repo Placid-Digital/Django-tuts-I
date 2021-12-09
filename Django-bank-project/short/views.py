@@ -2,6 +2,7 @@ import logging
 
 from django.contrib.auth import user_logged_in, signals
 from django.dispatch import receiver
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -13,10 +14,12 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
+            username = form.cleaned_data.get('email')
             messages.success(
                 request, f'Your account has been created! You are now able to login')
             return redirect('users/login.html')
+        else:
+            return HttpResponse(form.errors)    
     else:
         form = UserRegisterForm()
     context = {

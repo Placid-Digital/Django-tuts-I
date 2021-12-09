@@ -21,4 +21,6 @@ urlpatterns = [
     path("download-csv/", DownloadCSVViewdownloadcsv.as_view(), name="download-csv"),
     path('api/users/', UserCreate.as_view(), name='account-create'),
     path('login/', loginView.as_view(), name='token_obtain_pair'),
+    path('csv',views.getfile),
+    path('pdf',views.getpdf),  
 ]
