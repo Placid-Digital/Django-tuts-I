@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+# from EventGroup.user.views import home
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -37,8 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shadi',
+    # 'shadi',
+    'user',
+    'api',
+    'rest_framework',
+    'knox',
 ]
+
+# LOGIN_REDIRECT_URL = home
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +59,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'EventGroup.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        # 'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'knox.auth.TokenAuthentication',
+    ]
+}
 
 TEMPLATES = [
     {
@@ -72,6 +88,17 @@ WSGI_APPLICATION = 'EventGroup.wsgi.application'
 
 
 # Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test',
+        'USER': 'satish',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {

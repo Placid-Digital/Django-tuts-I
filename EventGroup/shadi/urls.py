@@ -9,7 +9,8 @@ app_name = "shadi"
 
 
 urlpatterns = [
-    # path("", views.homepage, name="homepage"),
+    path('', views.index, name='index'),
+    path('about', views.home, name='home'),
     path("registeration", views.register_request, name="register"),
     path("login", views.login_request, name="login")
 ]

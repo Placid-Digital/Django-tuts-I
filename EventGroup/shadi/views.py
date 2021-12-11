@@ -5,6 +5,31 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 
 # Create your views here.
+def view(request):
+    render('home.html')
+
+def login_page(request):
+   return render(request, 'shadi/login.html')
+
+
+
+def index(request):
+    return render(request,'shadi/home.html', context={})
+
+def home(request):
+    return render(request,'shadi/login.html', context={})
+
+
+
+
+def home(request):
+    return("this is my first page.")
+
+def login(request):
+    return("this is my first page.")
+
+
+
 # user registraction form
 
 def register_request(request):
