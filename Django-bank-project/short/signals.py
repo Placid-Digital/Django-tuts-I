@@ -21,5 +21,5 @@ def on_login(sender, user, request, **kwargs):
     print('User just logged in....')
 
 # @receiver(user_logged_in)
-# def post_login(sender, user, request, stuff=None, your=None, **kwargs):
+# def post_login(sender, users, request, stuff=None, your=None, **kwargs):
 

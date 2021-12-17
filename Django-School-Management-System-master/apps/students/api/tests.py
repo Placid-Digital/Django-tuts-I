@@ -31,7 +31,7 @@ class AccountsTest(APITestCase):
     def test_create_user_with_preexisting_username(self):
         data = {
                 'username': 'testuser',
-                'email': 'user@example.com',
+                'email': 'users@example.com',
                 'password': 'testuser'
                 }
 
@@ -46,7 +46,7 @@ class AccountsTest(APITestCase):
 class AccountsTest(APITestCase):
     def test_create_user(self):
         """
-        Ensure we can create a new user and a valid token is created with it.
+        Ensure we can create a new users and a valid token is created with it.
         """
         data = {
                 'username': 'foobar',

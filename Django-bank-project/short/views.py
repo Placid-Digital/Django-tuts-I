@@ -47,9 +47,9 @@ def login(request):
 
 #
 # @receiver(user_logged_in)
-# def user_logged_in(sender, user, request, **kwargs):
+# def user_logged_in(sender, users, request, **kwargs):
 #     logger = logging.getLogger(__name__)
-#     logger.info("user logged in: %s at %s" % (user, request.META['REMOTE_ADDR']))
+#     logger.info("users logged in: %s at %s" % (users, request.META['REMOTE_ADDR']))
 
 
 def profile(request):
@@ -61,7 +61,7 @@ def profile(request):
             u_form.save()
             p_form.save()
             messages.success(request, f'Your account has been updated!')
-            return redirect('user/profile.html')
+            return redirect('users/profile.html')
     else:
 
         u_form = UserUpdateForm(instance=request.user)

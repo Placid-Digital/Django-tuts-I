@@ -1,7 +1,7 @@
 import json
 from django.http.response import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
-from django.views.generic.base import TemplateView,View
+from django.views.generic.base import TemplateView, View
 from django.contrib.auth.hashers import check_password, make_password
 from django.shortcuts import redirect
 from django.contrib import messages
@@ -17,20 +17,18 @@ from rest_framework import permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
 
-
-# signal hera 
+# signal hera
 
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
-
 from id.models import Person
+
 
 # from django.http import HttpResponse
 
-# create SIGNAL hera
 
- 
+# THIS IS USE FOR SIGNAL ONLY
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -42,8 +40,8 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
- 
- 
+
+
 @login_required
 def profile(request):
     if request.method == 'POST':
@@ -56,19 +54,18 @@ def profile(request):
             p_form.save()
             messages.success(request, f'Your account has been updated!')
             return redirect('profile')
- 
+
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
- 
+
     context = {
         'u_form': u_form,
         'p_form': p_form
     }
- 
+
     return render(request, 'users/profile.html', context)
-
-
+# END OF THE SIGNAL
 
 
 # Create your views here.
@@ -76,87 +73,115 @@ def profile(request):
 def view(request):
     render('home.html')
 
+
 def login_page(request):
-   return render(request, 'id/login.html')
+    return render(request, 'id/login.html')
+
 
 def welcome_page(request):
-       return render(request, 'id/welcome.html')
-
-# create Table data form
-def data(request):
-       persons = Person.objects.filter(is_active=True).order_by('id')
-       
-       return render(request, 'id/table.html', context={
-           'request': request,
-           'persons': persons,
-       })
+    return render(request, 'id/welcome.html')
 
 
 def index(request):
-    return render(request,'id/home.html', context={})
+    return render(request, 'id/home.html', context={})
+
 
 def home(request):
-    return render(request,'id/login.html', context={})
+    return render(request, 'id/login.html', context={})
+
 
 def successful(request):
-    return render(request,'id/welcome.html', context={})
+    return render(request, 'id/welcome.html', context={})
 
-
-
+# THIS IS ONLY FOR STARTING Response FOR ALL PAGES
 def home(request):
-    return("this is my first page.")
+    return ("this is my first page.")
+
 
 def login(request):
-    return("this is my first page.")
+    return ("this is my first page.")
+
 
 def welcome(request):
-    return("this is my first page.")
+    return ("this is my first page.")
+
 
 def dataon(request):
-    return("this is my first page.")
+    return ("this is my first page.")
 
-
+# THIS IS ALL DATA VIEW
 class AboutUs(View):
-      def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return render(request, "home.html")
 
+
 class loginus(View):
-      def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return render(request, "login.html")
 
+
 class welcomeus(View):
-      def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return render(request, "welcome.html")
 
+
 class dataus(View):
-      def get(self, request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         return render(request, "table.html")
 
-     
-    
-#  create home form   
+
+#  create Ragistration form
 def form_data(request):
     if request.method == 'POST':
-        first_name=request.POST['first_name']
-        last_name=request.POST['last_name']
-        Company_name=request.POST['company']
-        Email_name=request.POST['Email']
-        Phone_number=request.POST['Phone']
-        Password=make_password(request.POST['Password'])
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        Company_name = request.POST['company']
+        Email_name = request.POST['Email']
+        Phone_number = request.POST['Phone']
+        Password = make_password(request.POST['Password'])
         if Person.objects.filter(Phone_number=Phone_number).exists():
-            messages.error(request,"phone number already exists")
+            messages.error(request, "phone number already exists")
             return redirect('/')
-            
+
         elif Person.objects.filter(Email_name=Email_name).exists():
-            messages.error(request,"Email id already exists")
+            messages.error(request, "Email id already exists")
             return redirect('/')
-    
-        else:    
+
+        else:
             Person.objects.create(first_name=first_name,
-                            last_name=last_name,Company_name=Company_name,
-                            Email_name=Email_name,Phone_number=Phone_number,Password=Password)
+                                  last_name=last_name, Company_name=Company_name,
+                                  Email_name=Email_name, Phone_number=Phone_number, Password=Password)
             return redirect('/login/')
-# creat delete button 
+
+
+# create login form
+def Login_form(request):
+    if request.method == 'POST':
+        Phone_number = request.POST['Phone']
+        User_Password = request.POST['Password']
+        if Person.objects.filter(Phone_number=Phone_number).exists():
+            obj = Person.objects.get(Phone_number=Phone_number)
+            Password = obj.Password
+            if check_password(User_Password, Password):
+                return redirect('/welcome/')
+            else:
+                return HttpResponse('password incorrect')
+        else:
+            return HttpResponse('phone number is not registered')
+
+
+# THIS IS CLIENT Authentication SYSTEM
+# create Table data form
+def data(request):
+    persons = Person.objects.filter(is_active=True).order_by('id')
+
+    return render(request, 'id/table.html', context={
+        'request': request,
+        'persons': persons,
+    })
+
+
+# create delete button
 def delete_user(request):
     if request.method == 'POST':
         data = request.body.decode('utf-8')
@@ -170,48 +195,34 @@ def delete_user(request):
     else:
         return JsonResponse({"staus": False, "message": "Method not allowed."})
 
-# create login form 
-def Login_form(request):
-        if request.method == 'POST':
-            Phone_number=request.POST['Phone']
-            User_Password=request.POST['Password']
-            if Person.objects.filter(Phone_number=Phone_number).exists():
-                obj = Person.objects.get(Phone_number=Phone_number)
-                Password=obj.Password
-                if check_password(User_Password,Password):
-                    return redirect('/welcome/')
-                else:
-                    return HttpResponse('password incorrect')
-            else:
-                return HttpResponse('phone number is not registered')
 
-# creat Edit button
-def update_view(request,uid):
+# create Edit button
+def update_view(request, uid):
     res = Person.objects.get(id=uid)
-    return render(request,'id/update.html', context={
-        
+    return render(request, 'id/update.html', context={
+
         'person': res,
     })
 
 
-     
+# USE UPDATE DATA
 def update_form_data(request):
     if request.method == 'POST':
         uid = request.POST['uid']
-        first_name=request.POST['first_name']
-        last_name=request.POST['last_name']
-        Company_name=request.POST['company']
-        Email_name=request.POST['Email']
-        Phone_number=request.POST['Phone']
-        
-          
-        Person.objects.filter(id=uid).update(first_name=first_name,
-                            last_name=last_name,Company_name=Company_name,
-                            Email_name=Email_name,Phone_number=Phone_number)
-        return redirect('/data/')
-        # redirect to table form
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        Company_name = request.POST['company']
+        Email_name = request.POST['Email']
+        Phone_number = request.POST['Phone']
 
-# API
+        Person.objects.filter(id=uid).update(first_name=first_name,
+                                             last_name=last_name, Company_name=Company_name,
+                                             Email_name=Email_name, Phone_number=Phone_number)
+        return redirect('/data/')
+        # redirect to table form    AND OF THE CLIENT TABLE
+
+
+# THIS IS API SYSTEM
 # Register API
 class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
@@ -221,11 +232,11 @@ class RegisterAPI(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response({
-        "user": UserSerializer(user, context=self.get_serializer_context()).data,
-        "token": AuthToken.objects.create(user)[1]
+            "users": UserSerializer(user, context=self.get_serializer_context()).data,
+            "token": AuthToken.objects.create(user)[1]
         })
-        
-                    
+
+
 # LOGIN API
 class LoginAPI(KnoxLoginView):
     permission_classes = (permissions.AllowAny,)
@@ -233,12 +244,8 @@ class LoginAPI(KnoxLoginView):
     def post(self, request, format=None):
         serializer = AuthTokenSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        user = serializer.validated_data['user']
+        user = serializer.validated_data['users']
         login(user)
-        return super(LoginAPI, self).post(request, format=None)       
-                    
+        return super(LoginAPI, self).post(request, format=None)
 
-        
-
-        
-        
+      # END OF API

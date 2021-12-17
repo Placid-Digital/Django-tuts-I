@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
                 ('status', models.CharField(choices=[('disabled', 'Disabled'), ('active', 'Active'), ('deleted', 'Deleted'), ('blocked', 'Blocked'), ('completed', 'Completed')], max_length=10)),
                 ('created_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='usercoin_created_user', to=settings.AUTH_USER_MODEL)),
                 ('updated_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='usercoin_updated_user', to=settings.AUTH_USER_MODEL)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('users', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.CreateModel(
@@ -130,10 +130,10 @@ class Migration(migrations.Migration):
                 ('created_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='eventwishlist_created_user', to=settings.AUTH_USER_MODEL)),
                 ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='events.Event')),
                 ('updated_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='eventwishlist_updated_user', to=settings.AUTH_USER_MODEL)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'unique_together': {('event', 'user')},
+                'unique_together': {('event', 'users')},
             },
         ),
         migrations.CreateModel(
@@ -147,10 +147,10 @@ class Migration(migrations.Migration):
                 ('created_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='eventmember_created_user', to=settings.AUTH_USER_MODEL)),
                 ('event', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='events.Event')),
                 ('updated_user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='eventmember_updated_user', to=settings.AUTH_USER_MODEL)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'unique_together': {('event', 'user')},
+                'unique_together': {('event', 'users')},
             },
         ),
     ]

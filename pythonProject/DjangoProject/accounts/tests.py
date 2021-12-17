@@ -7,7 +7,7 @@ from rest_framework.authtoken.models import Token
 
 # class AccountsTest(APITestCase):
 #     def test_create_user_with_short_password(self):
-#         # We want to go ahead and originally create a user.
+#         # We want to go ahead and originally create a users.
 #         self.test_user = User.objects.create_user('testuser', 'test@example.com', 'testpassword')
 #
 #         # URL for creating an account.
@@ -15,7 +15,7 @@ from rest_framework.authtoken.models import Token
 #
 #     def test_create_user(self):
 #         """
-#         Ensure we can create a new user and a valid token is created with it.
+#         Ensure we can create a new users and a valid token is created with it.
 #         """
 #         data = {
 #             'username': 'foobar',
@@ -41,7 +41,7 @@ class AccountsTest(APITestCase):
 
     def test_create_user_with_short_password(self):
         """
-        Ensure user is not created for password lengths less than 8.
+        Ensure users is not created for password lengths less than 8.
         """
         data = {
                 'username': 'foobar',
@@ -99,7 +99,7 @@ class AccountsTest(APITestCase):
     def test_create_user_with_preexisting_username(self):
         data = {
                 'username': 'testuser',
-                'email': 'user@example.com',
+                'email': 'users@example.com',
                 'password': 'testuser'
                 }
 
@@ -155,7 +155,7 @@ class AccountsTestCase(APITestCase):
 class AccountsTest(APITestCase):
     def test_create_user(self):
         """
-        Ensure we can create a new user and a valid token is created with it.
+        Ensure we can create a new users and a valid token is created with it.
         """
         data = {
                 'username': 'foobar',

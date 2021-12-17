@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('current_balance', models.DecimalField(decimal_places=2, max_digits=100)),
                 ('transaction_time', models.DateTimeField(default=datetime.datetime.now)),
                 ('amount', models.DecimalField(decimal_places=2, max_digits=100)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

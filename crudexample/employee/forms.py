@@ -9,7 +9,7 @@ class EmployeeForm(forms.ModelForm):
 
 
 
-# email token form for user
+# email token form for users
 
 class SignupForm(UserCreationForm):
     email = forms.EmailField(max_length=200, help_text='Required')

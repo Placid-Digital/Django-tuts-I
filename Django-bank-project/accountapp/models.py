@@ -94,12 +94,12 @@ class MoneyTransfer(models.Model):
 
 # class Account(models.Model):
 #     # Acc_type = models.ForeignKey(BankAccountType, on_delete=models.CASCADE)
-#     user = models.OneToOneField(User, related_name="acccount", on_delete=models.CASCADE)
+#     users = models.OneToOneField(User, related_name="acccount", on_delete=models.CASCADE)
 #     email = models.EmailField(max_length=254, default="")
 #     # gender = models.CharField(max_length=1, choices="GENDER_CHOICES")
 #     address = models.CharField(max_length=50, blank=True)
 #     # def __str__(self):
 #     #     return self.name
 
-# user = models.OneToOneField(User_Model, related_name='account', on_delete=models.CASCADE)
+# users = models.OneToOneField(User_Model, related_name='account', on_delete=models.CASCADE)
 from django.db.models.fields import IntegerField

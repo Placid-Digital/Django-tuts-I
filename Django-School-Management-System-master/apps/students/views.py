@@ -54,7 +54,7 @@ def getfile(request):
 # schoolproject
 class AccountsTest(APITestCase):
     def setUp(self):
-        # We want to go ahead and originally create a user.
+        # We want to go ahead and originally create a users.
         self.test_user = User.objects.create_user('testuser', 'test@example.com', 'testpassword')
 
         # URL for creating an account.
@@ -62,7 +62,7 @@ class AccountsTest(APITestCase):
 
     def test_create_user(self):
         """
-        Ensure we can create a new user and a valid token is created with it.
+        Ensure we can create a new users and a valid token is created with it.
         """
         data = {
             'username': 'foobar',
@@ -84,7 +84,7 @@ class AccountsTest(APITestCase):
 
 class UserCreate(APIView):
     """
-    Creates the user.
+    Creates the users.
     """
 
     def post(self, request):

@@ -14,22 +14,22 @@ def view(request):
     render('home.html')
 
 # def login_page(request):
-#    return render(request, 'user/login.html')
+#    return render(request, 'users/login.html')
 #
 # def regiseter(request):
-#        return render(request, 'user/regiseter.html')
+#        return render(request, 'users/regiseter.html')
 
 
 def home(request):
-    return render(request, 'user/home.html')
+    return render(request, 'users/home.html')
 
 #
 #
 # def home(request):
-#     return render(request,'user/home.html', context={})
+#     return render(request,'users/home.html', context={})
 #
 # def login(request):
-#     return render(request,'user/login.html', context={})
+#     return render(request,'users/login.html', context={})
 
 
 
@@ -43,7 +43,7 @@ def home(request):
 #             form.save()
 #
 #             messages.success(request, f'Your account has been created. You can log in now!')
-#             return redirect('user/login.html')
+#             return redirect('users/login.html')
 #     else:
 #         form = UserCreationForm()
 #

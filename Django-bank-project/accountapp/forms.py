@@ -45,4 +45,4 @@ class MoneyTransferForm(forms.ModelForm):
 
 
 # ,  UserBankAccountDetail
-# user = forms.CharField(widget=forms.HiddenInput(), initial=get_user_name())
+# users = forms.CharField(widget=forms.HiddenInput(), initial=get_user_name())

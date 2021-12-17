@@ -57,7 +57,7 @@ def edit(request):
 @login_required
 def profile(request):
     user = Customer.objects.filter(user=request.user)
-    #print(user)
+    #print(users)
     context={
         "data":user
     }
@@ -66,7 +66,7 @@ def profile(request):
 @login_required
 def withdraw(request):
     user=Customer.objects.filter(user=request.user)
-    #print(user)
+    #print(users)
     context={
         "set":user
     }
@@ -95,7 +95,7 @@ def amount(request):
 @login_required
 def deposit(request):
     user=Customer.objects.get(user=request.user)
-    #print(user.balance)
+    #print(users.balance)
     context={
         "balance":user.balance
     }

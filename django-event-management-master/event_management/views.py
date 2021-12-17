@@ -14,7 +14,7 @@ def dashboard(request):
     complete_event = Event.objects.filter(status='completed').count()
     events = Event.objects.all()
     context = {
-        'user': user,
+        'users': user,
         'event_ctg': event_ctg,
         'event': event,
         'complete_event': complete_event,

@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 class UserCreate(APIView):
     """
-    Creates the user.
+    Creates the users.
     """
 
     def post(self, request, format='json'):

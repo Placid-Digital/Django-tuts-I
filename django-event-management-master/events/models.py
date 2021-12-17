@@ -134,7 +134,7 @@ class EventMember(models.Model):
 
 
     class Meta:
-        unique_together = ['event', 'user']
+        unique_together = ['event', 'users']
 
     def __str__(self):
         return str(self.user)
@@ -161,7 +161,7 @@ class EventUserWishList(models.Model):
 
 
     class Meta:
-        unique_together = ['event', 'user']
+        unique_together = ['event', 'users']
 
     def __str__(self):
         return str(self.event)
@@ -195,7 +195,7 @@ class UserCoin(models.Model):
         return str(self.user)
     
     def get_absolute_url(self):
-        return reverse('user-mark')
+        return reverse('users-mark')
 
 
 

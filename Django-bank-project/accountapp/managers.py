@@ -7,15 +7,15 @@
 
 #     def _create_user(self, email, password, **extra_fields):
 #         """
-#         Create and save a user with the given email, and password.
+#         Create and save a users with the given email, and password.
 #         """
 #         if not email:
 #             raise ValueError('The given email must be set')
 #         email = self.normalize_email(email)
-#         user = self.model(email=email, **extra_fields)
-#         user.set_password(password)
-#         user.save(using=self._db)
-#         return user
+#         users = self.model(email=email, **extra_fields)
+#         users.set_password(password)
+#         users.save(using=self._db)
+#         return users
 
 #     def create_user(self, email=None, password=None, **extra_fields):
 #         extra_fields.setdefault('is_staff', False)

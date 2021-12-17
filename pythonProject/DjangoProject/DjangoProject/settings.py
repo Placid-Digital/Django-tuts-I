@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'rest_framework.authtoken',
-    'user',
+    'users',
     'knox'
 
 

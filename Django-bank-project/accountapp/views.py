@@ -29,7 +29,7 @@ def home(request):
 
 def signup(request):
     """
-    :return: Signup page and Create user basic detail.
+    :return: Signup page and Create users basic detail.
     """
     if request.method == "POST":
         form = UserForm(request.POST)

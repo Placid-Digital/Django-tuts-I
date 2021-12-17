@@ -144,7 +144,7 @@ class EventDeleteView(LoginRequiredMixin, DeleteView):
 class AddEventMemberCreateView(LoginRequiredMixin, CreateView):
     login_url = 'login'
     model = EventMember
-    fields = ['event', 'user', 'attend_status', 'status']
+    fields = ['event', 'users', 'attend_status', 'status']
     template_name = 'events/add_event_member.html'
 
     def form_valid(self, form):
@@ -177,7 +177,7 @@ class EventUserWishListView(LoginRequiredMixin, ListView):
 class AddEventUserWishListCreateView(LoginRequiredMixin, CreateView):
     login_url = 'login'
     model = EventUserWishList
-    fields = ['event', 'user', 'status']
+    fields = ['event', 'users', 'status']
     template_name = 'events/add_event_user_wish.html'
 
     def form_valid(self, form):
@@ -233,7 +233,7 @@ class CompleteEventUserList(LoginRequiredMixin, ListView):
 class CreateUserMark(LoginRequiredMixin, CreateView):
     login_url = 'login'
     model = UserCoin
-    fields = ['user', 'gain_type', 'gain_coin', 'status']
+    fields = ['users', 'gain_type', 'gain_coin', 'status']
     template_name = 'events/create_user_mark.html'
 
     def form_valid(self, form):

@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
                 ('gender', models.CharField(choices=[('M', 'Male'), ('F', 'Female')], max_length=1)),
                 ('birth_date', models.DateField(blank=True, null=True)),
                 ('address', models.CharField(blank=True, max_length=50)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='account', to='accountapp.user_model')),
+                ('users', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='account', to='accountapp.user_model')),
             ],
         ),
         migrations.CreateModel(

@@ -58,7 +58,7 @@ def update_form_data(request):
                                              Email_name=Email_name, Phone_number=Phone_number)
         return redirect('/data/')
 
-# user registraction form
+# users registraction form
 
 def register_request(request):
     if request.method == "POST":
