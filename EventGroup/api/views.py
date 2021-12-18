@@ -1,91 +1,76 @@
 import users
-from django.contrib.auth.handlers.modwsgi import check_password
-from django.contrib.auth.hashers import make_password
-from django.core.checks import messages
-from django.http import HttpResponse
-from django.shortcuts import redirect
-from rest_framework import generics
-from rest_framework.response import Response
-from knox.models import AuthToken
-from .serializers import UserSerializer
 from django.contrib.auth import login
+from django.contrib.auth.hashers import make_password, check_password
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+from knox.views import LoginView
+from rest_framework import generics
 # RegisterSerializer
 from rest_framework import permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
-from knox.views import LoginView as KnoxLoginView, LoginView
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from .models import Users
+from .serializers import UserSerializer
 
 
-# Register
-
-def form_data(request):
+# Register API
+@csrf_exempt
+@api_view(['POST'])
+def register(request):
     if request.method == 'POST':
-        first_name = request.POST['first_name']
-        address = request.POST['address']
-        Email_name = request.POST['Email']
-        Phone_number = request.POST['Phone']
-        Password = make_password(request.POST['Password'])
-        if users.objects.filter(Phone_number=Phone_number).exists():
-            messages = {"status": False, "massages": "phone number already exists"}
+        first_name = request.data['name']
+        Email_name = request.data['email']
+        Phone_number = request.data['phone']
+        address = request.data['address']
+        Password = make_password(request.data['password'])
+        # data = UserSerializer(data=request.data)
+        # if data.is_valid():
+
+        if Users.objects.filter(phone_no=Phone_number).exists():
+            messages = {"status": False, "massage": "phone number already exists"}
 
 
-            # return redirect('/')
-
-        elif users.objects.filter(Email_name=Email_name).exists():
-            messages = {"status": False, "massages": "Email id already exists"}
-            # return redirect('/')
+        elif Users.objects.filter(email=Email_name).exists():
+            messages = {"status": False, "massage": "Email id already exists"}
 
         else:
-            users.objects.create(first_name=first_name,
+            Users.objects.create(first_name=first_name,
                                  address=address,
-                                 Email_name=Email_name, Phone_number=Phone_number, Password=Password)
-            messages = {"status": True, "massages": "Registration successful"}
+                                 email=Email_name,
+                                 phone_no=Phone_number,
+                                 password=Password)
+            messages = {"status": True, "massage": "Registration successful"}
+        return Response(messages)
+
+    def get(self, request):
+        return Response({"Hello world"})
+
+# LOGIN API
+@csrf_exempt
+@api_view(['POST'])
+def Login(request):
+    if request.method == 'POST':
+        Phone_number = request.data['phone']
+        Users_Password = request.data['password']
+        if Users.objects.filter(phone_no=Phone_number).exists():
+            obj = Users.objects.get(phone_no=Phone_number)
+            password = Users_Password
+
+            if check_password(Users_Password, password):
+                messages = {'status': True, 'massage': 'login successful'}
+
+            else:
+
+                messages = {"status": False, "massage": "password is incorrect"}
+                # return Response('password incorrect')
+
+        else:
+            messages = {"status": False, "massage": "phone number is not registered"}
+            # return Response('phone number is not registered')
+        #
         return Response(messages)
 
 
-def Login_form(request):
-    if request.method == 'POST':
-        Phone_number = request.POST['Phone']
-        Password = request.POST['Password']
-        if users.objects.filter(Phone_number=Phone_number).exists():
-            obj = users.objects.get(Phone_number=Phone_number)
-            Password = obj.Password
-
-        else:
-
-            messages = {"status": False, "massages": "password is incorrect"}
-            return Response('password incorrect')
-
-    else:
-        messages = {"status": False, "massages": "phone number is not registered"}
-        return Response('phone number is not registered')
-
-    return Response(messages)
-
-# Register API
-class RegisterAPI(generics.GenericAPIView):
-    serializer_class = UserSerializer
-
-    def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        user = serializer.save()
-        return Response({
-            "users": UserSerializer(user, context=self.get_serializer_context()).data,
-            # "token": AuthToken.objects.create(users)[1]
-        })
-
-
-class LoginAPI(LoginView):
-    permission_classes = (permissions.AllowAny,)
-
-    def post(self, request, format=None):
-        serializer = AuthTokenSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        users = serializer.validated_data['users']
-        login(request, users)
-        return super(LoginAPI, self).post(request, format=None)
-
-        # "users": UserSerializer.validated_data
-        # token = AuthToken.objects.create(users)[1]
-
-        # "token": AuthToken.objects.create(users)[1]
