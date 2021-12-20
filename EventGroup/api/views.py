@@ -57,9 +57,11 @@ def Login(request):
         Users_Password = request.data['password']
         if Users.objects.filter(phone_no=Phone_number).exists():
             obj = Users.objects.get(phone_no=Phone_number)
-            password = Users_Password
+            password = obj.password
 
-            if check_password(Users_Password, password):
+            print(password)
+
+            if check_password(Users_Password,password):
                 messages = {'status': True, 'massage': 'login successful'}
 
             else:
