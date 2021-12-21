@@ -7,6 +7,6 @@ urlpatterns = [
     path('', include('myapp.urls')),
     path('api', include('api.urls')),
     path('api/account', include('accounts.urls')),
-    path('users/', include('users.urls'))
+    # path('users/', include('users.urls'))
 
 ]

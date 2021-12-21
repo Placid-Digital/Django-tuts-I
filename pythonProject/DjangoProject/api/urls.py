@@ -16,3 +16,4 @@ urlpatterns = [
     path('acc_formdata/',views.LoginForm, name ='login'),
     path('Loginform/',views.LoginForm, name ='login')
 ]
+

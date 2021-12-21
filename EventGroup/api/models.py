@@ -10,6 +10,8 @@ class Users(models.Model):
     phone_no = models.CharField(max_length=10, unique=True)
     password = models.CharField(max_length=250)
     address = models.TextField(null=True, blank=True)
+    # token = models.CharField(max_length=500, null=True, default="")
+
 
     def __str__(self):
         return "{}".format(self.email)

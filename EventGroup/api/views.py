@@ -1,16 +1,23 @@
+import token
+
 import users
 from django.contrib.auth import login
 from django.contrib.auth.hashers import make_password, check_password
-from django.http import HttpResponse
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from knox.models import AuthToken
 from knox.views import LoginView
 from rest_framework import generics
 # RegisterSerializer
 from rest_framework import permissions
+from rest_framework.authtoken.models import Token
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework.views import APIView
+from django.conf import settings
+
 
 from .models import Users
 from .serializers import UserSerializer
@@ -75,4 +82,7 @@ def Login(request):
         #
         return Response(messages)
 
-
+    # return Response({
+    #     "users": UserSerializer(users, context=self.get_serializer_context()).data,
+    #     "token": token[1]
+    # })
