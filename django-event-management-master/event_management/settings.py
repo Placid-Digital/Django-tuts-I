@@ -92,19 +92,6 @@ DATABASES = {
     }
 }
 
-# Mongodb config
-# DATABASES = {
-#        'default': {
-#            'ENGINE': 'djongo',
-#            'NAME': 'rochedb',
-#            'CLIENT': {
-#               'host': 'mongodb+srv://sajib:' + urllib.parse.quote_plus('nothing1234') + '@cluster0-jjia5.mongodb.net/rochedb?retryWrites=true&w=majority',
-#               'port': 27017,
-#               'username': 'sajib',
-#               'password': 'nothing1234',
-#             }
-#        }
-#    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

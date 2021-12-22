@@ -24,15 +24,17 @@ class EventCategory(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
         return reverse('event-category-list')
+
 
 class JobCategory(models.Model):
     name = models.CharField(max_length=255, unique=True)
 
     def __str__(self):
         return self.name
+
 
 class Event(models.Model):
     category = models.ForeignKey(EventCategory, on_delete=models.CASCADE)
@@ -51,8 +53,10 @@ class Event(models.Model):
     location = LocationField()
     points = models.PositiveIntegerField()
     maximum_attende = models.PositiveIntegerField()
-    created_user = models.ForeignKey('auth.User', on_delete=models.CASCADE, blank=True, null=True, related_name='event_created_user')
-    updated_user = models.ForeignKey('auth.User', on_delete=models.CASCADE, blank=True, null=True, related_name='event_updated_user')
+    created_user = models.ForeignKey('auth.User', on_delete=models.CASCADE, blank=True, null=True,
+                                     related_name='event_created_user')
+    updated_user = models.ForeignKey('auth.User', on_delete=models.CASCADE, blank=True, null=True,
+                                     related_name='event_updated_user')
     created_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now_add=True)
     status_choice = (
@@ -67,16 +71,17 @@ class Event(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
         return reverse('event-list')
-    
+
     def created_updated(model, request):
         obj = model.objects.latest('pk')
         if obj.created_by is None:
             obj.created_by = request.user
         obj.updated_by = request.user
         obj.save()
+
 
 class EventImage(models.Model):
     event = models.OneToOneField(Event, on_delete=models.CASCADE)
@@ -132,13 +137,12 @@ class EventMember(models.Model):
     )
     status = models.CharField(choices=status_choice, max_length=10)
 
-
-    class Meta:
-        unique_together = ['event', 'users']
+    # class Meta:
+        # unique_together = ['event', 'users']
 
     def __str__(self):
         return str(self.user)
-    
+
     def get_absolute_url(self):
         return reverse('join-event-list')
 
@@ -159,13 +163,12 @@ class EventUserWishList(models.Model):
     )
     status = models.CharField(choices=status_choice, max_length=10)
 
-
-    class Meta:
-        unique_together = ['event', 'users']
+    # class Meta:
+        # unique_together = ['event', 'users']
 
     def __str__(self):
         return str(self.event)
-    
+
     def get_absolute_url(self):
         return reverse('event-wish-list')
 
@@ -193,15 +196,6 @@ class UserCoin(models.Model):
 
     def __str__(self):
         return str(self.user)
-    
+
     def get_absolute_url(self):
         return reverse('users-mark')
-
-
-
-
-
-
-
-
-

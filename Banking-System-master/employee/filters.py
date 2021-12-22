@@ -10,7 +10,7 @@ class TransactionFilter(django_filters.FilterSet):
     )
     class Meta:
         model=Transaction
-        fields=['users','type','transaction_id']
+        fields=['user','type','transaction_id']
 
     def filter_by_date(self,queryset,name,value):
         print(value)
