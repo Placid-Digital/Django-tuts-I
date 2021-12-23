@@ -17,12 +17,12 @@ class Users(models.Model):
         return "{}".format(self.email)
 
 
-class Event(models.Model):
-    mehadi = models.CharField(max_length=150)
-    makeup = models.CharField(max_length=200)
-    decoration = models.CharField(max_length=100)
-    photography = models.CharField(max_length=250)
-    catering = models.CharField(null=True, blank=True)
-
-    def __str__(self):
-        return "{}".format(self.email)
+# class Event(models.Model):
+#     mehadi = models.CharField(max_length=150)
+#     makeup = models.CharField(max_length=200)
+#     decoration = models.CharField(max_length=100)
+#     photography = models.CharField(max_length=250)
+#     catering = models.CharField(null=True, blank=True)
+#
+#     def __str__(self):
+#         return "{}".format(self.email)
